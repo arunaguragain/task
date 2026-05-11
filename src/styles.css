@@ -302,6 +302,117 @@ body {
   display: block;
 }
 
+.site-footer {
+  margin: 20px 0 0;
+  border-top: 1px solid #222734;
+  background: #1a1b20;
+}
+
+.footer-top-logo {
+  width: 84px;
+  height: 30px;
+  border-radius: 10px;
+  background: #f2f4f8;
+  border: 1px solid #d9dde7;
+  margin: -14px auto 12px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.footer-top-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr;
+  gap: 34px;
+  padding: 14px var(--gutter) 18px;
+}
+
+.footer-col p,
+.footer-col h4 {
+  margin: 0 0 8px;
+}
+
+.footer-col p {
+  color: #d1d6e2;
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.footer-col h4 {
+  color: #e7ebf7;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.footer-small-logo {
+  width: 82px;
+  height: 30px;
+  border-radius: 10px;
+  background: #f2f4f8;
+  border: 1px solid #d9dde7;
+  margin: 14px 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.footer-small-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.footer-contact p {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+}
+
+.trust-box,
+.nvidia-box {
+  margin-top: 14px;
+  border: 1px solid #3a3d45;
+  background: #e8e9eb;
+  color: #11131a;
+  border-radius: 2px;
+  padding: 9px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.nvidia-box {
+  max-width: 170px;
+  margin-left: auto;
+  text-transform: none;
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.socials span {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #eceff4;
+  color: #1a1c23;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
 @media (max-width: 920px) {
   :root {
     --gutter: 14px;
@@ -337,6 +448,20 @@ body {
 
   .hero-arrows {
     margin: 0 var(--gutter) 6px;
+  }
+
+  .site-footer {
+    margin: 16px 0 0;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 12px var(--gutter) 14px;
+  }
+
+  .nvidia-box {
+    margin-left: 0;
   }
 }
 

@@ -5,7 +5,6 @@ const topChoices = [
     title: 'iTunes Giftcard',
     subtitle: 'Giftcard',
     price: 'NRP 800.00',
-    badge: '5',
     image: '/image1.png'
   },
   {
@@ -24,7 +23,6 @@ const topChoices = [
     title: 'Valorant Giftcard',
     subtitle: 'Giftcard',
     price: 'NRP 2200.00',
-    badge: '25',
     image: '/image4.png'
   }
 ];
@@ -37,7 +35,6 @@ function ProductCard({ product, variant = 'choice' }) {
   return (
     <article className="product-card">
       <div className={`thumb ${variant}`} style={thumbStyle}>
-        {product.badge && <span className="badge">{product.badge}</span>}
       </div>
       <span className="subtitle">{product.subtitle}</span>
       <h3>{product.title}</h3>
@@ -112,10 +109,45 @@ export default function App() {
 
           <Section title="Top choices" items={topChoices} variant="choice" />
 
-          <div className="hero-arrows" aria-hidden="true">
-            <button className="arrow ghost">{'<'}</button>
-            <button className="arrow ghost">{'>'}</button>
-          </div>
+          <footer className="site-footer">
+            <div className="footer-top-logo">
+              <img src="/logo.png" alt="JM Store" />
+            </div>
+
+            <div className="footer-grid">
+              <div className="footer-col">
+                <p>JM Store © 2022 - 2024. An affiliate with RajMaskey & AshimNeupane</p>
+                <div className="footer-small-logo">
+                  <img src="/logo.png" alt="JM Store mark" />
+                </div>
+                <p>JM Store Inc © 2022 - 2023</p>
+                <p>An Raj&apos;s Company.</p>
+                <div className="trust-box">BLOCKED BY YOUR BANK? BUY FROM PARCEL</div>
+              </div>
+
+              <div className="footer-col footer-contact">
+                <p>📍 Biratnagar 5, Pokhara 17 Nepal</p>
+                <p>📞 +977 9822789260</p>
+                <p>✉ contact@rajmaskey.com.np</p>
+              </div>
+
+              <div className="footer-col">
+                <h4>About us</h4>
+                <p>
+                  JM&Store or Parce1Nepal is Nepal based digital marketplace that specializes in
+                  the sale of videogames, game-keys, and gaming-related products.
+                </p>
+                <div className="socials" aria-label="social links">
+                  <span>f</span>
+                  <span>x</span>
+                  <span>in</span>
+                  <span>gh</span>
+                </div>
+                <p>See our reviews on * Trustpilot</p>
+                <div className="nvidia-box">NVIDIA Inception Program</div>
+              </div>
+            </div>
+          </footer>
         </div>
       </main>
     </div>
