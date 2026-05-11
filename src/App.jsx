@@ -48,9 +48,6 @@ function Section({ title, items, variant }) {
     <section className="catalog-section">
       <div className="section-head">
         <h2>{title}</h2>
-        <button className="arrow" aria-label={`See more ${title}`}>
-          {'>'}
-        </button>
       </div>
       <div className="grid">
         {items.map((item) => (
@@ -106,6 +103,11 @@ export default function App() {
               </div>
             </aside>
           </section>
+
+          <div className="hero-arrows" aria-hidden="true">
+            <button className="hero-arrow-btn">{'<'}</button>
+            <button className="hero-arrow-btn">{'>'}</button>
+          </div>
 
           <Section title="Top choices" items={topChoices} variant="choice" />
 
